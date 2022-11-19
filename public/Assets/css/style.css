@@ -1,0 +1,525 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/*********************** Header styling **************************/
+.header.scrolled{
+    background-color: white;
+    box-shadow: #959494 0px 1px 0px;
+    transition: all 1.2s;
+}
+.header.scrolled .navigationlinks li a, .header.scrolled .navigationlinks .serviceList{
+    color: #081853;
+}
+.header.scrolled .selectLang select{
+    color: #081853;
+}
+.header.scrolled .serviceList ul li a{
+    color: white;
+}
+ .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(12, 4, 65, 0.45);
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+ }
+ option{
+    color: #081853;
+    padding: 10px;
+ }
+ .navlist_btn{
+    display: none;
+ }
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    position: absolute;
+    left: 0px;
+}
+.logo img{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+/******************** nav bar styling **********/
+.navbar {
+    display: flex;
+    padding: 15px;
+}
+.navigationlinks{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.navigationlinks li a {
+    margin:  30px;
+    padding: 8px;
+}
+.serviceList{
+    position: relative;
+    color: white;
+    margin: 30px;
+    padding: 20px 8px;
+    cursor: pointer;
+}
+.ourservice{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: max-content; 
+    padding: 12px;
+    background-color: #081853;
+    border-radius: 11px;
+    
+}
+.ourservice.show{
+    display: flex;
+}
+.ourservice li{
+   display: none;
+    margin:10px;
+}
+.ourservice.show li{
+    display: block;
+}
+.selectLang{
+    position: absolute;
+    right: 15px;
+    top:10px;
+}
+.selectLang select{
+    
+    border:none;
+    font-weight: 400px;
+    font-size: 20px;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+/******************************** Main Styling ****************************/
+.main{
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(10, 4, 48, 0.39) , rgba(9, 3, 47, 0));
+}
+.front-text{
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-left: 111px;
+} 
+.front-text h1{
+    font-size: 75px;
+}
+.front-text p{
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: 300;
+}
+.front-text button{
+    color:#6320F0;
+    width: 180px;
+    height: 55px;
+    border: none;
+    border-radius: 11px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 19px;
+    transition: all 1s;
+}
+.front-text button:hover{
+    width: 250px;
+}
+.front{
+    height: 100vh;
+    background-image: url("../imgs/bg.svg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+ }
+
+/******************* Services ***************/
+.services{
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+}
+.services .title,.partner .title{
+    margin: 2px;
+    color: #081853;
+    width: max-content;
+    
+    padding: 2px 8px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.services .title h1,.partner .title h1{
+    border-bottom: #081853 solid 2px;
+    
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.parent{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    justify-items: center;
+}
+.item{
+    text-align: center;
+    width: 320px;
+    margin:   20px;
+    transition: all 1s;
+}
+.item:hover .picture{
+    background: linear-gradient(to left top ,#266AD4 ,#33A9CE ,#1B5EA5);
+    border-radius: 10px;
+}
+.item .picture{
+    cursor: pointer;
+    background-color: transparent;
+    border: #081853 solid 2px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #081853;
+    box-shadow: #595959 4px 3px 2px;
+    transition: all 1s;
+}
+.item:hover .picture{
+    color: white;
+}
+.item .picture img{
+    width: 80%;
+    height: 250px;
+}
+
+/******************** Footer styling *************/
+.footer{
+    background: linear-gradient(90deg, #081853, rgba(92, 60, 220, 1));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer h1{
+    margin-top: 40px;
+}
+.footer .info{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+.kawa-social{
+    margin: 10px;
+}
+.kawa-social i{
+    font-size: 25px;
+    margin: 5px;
+}
+/*********************** Team styling **********/
+.members{
+    text-align: center;
+    height: max-content;
+}
+.member{
+    width: 280px;
+    height: 330px;
+    margin: 20px;
+    color: #081853;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #595959 3px 2px 1px;
+    border-radius: 11px;
+    position: relative;
+}
+.memberpic{
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    
+}
+.member-info{
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    background: rgba(0, 0, 0, 0.48);
+    width: 100%;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.member-info h5{
+    margin-top: 5px;
+}
+.member-info p{
+    font-size: 13px;
+}
+.member:hover .social{
+    height: max-content;
+    
+}
+.member:hover .social i{
+    display: block;
+}
+.social{
+    width: max-content;
+    height: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 7px;
+}
+.social i{
+    margin: 5px;
+    color: white;
+    display: none;
+}
+
+.member:hover .social i:hover{
+    font-size: 23px;
+    color: #081853;
+}
+/************* About US **********************/
+.about{
+    display: flex;
+    margin-top: 40px;
+}
+.titleabout{
+    text-align: center;
+    padding: 20px;
+    color: #081853;
+    margin-top: 50px;
+}
+.pic{
+    width: 50%;
+}
+.pic img{
+    width: 500px;
+    margin: 15px;
+}
+.about .text{
+    font-size: 25px;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/***************** our partner *****************/
+.swiper.myswiper {
+    width: 80%;
+    height: 100%;
+    padding: 40px 80px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    
+
+  }
+  .swiper-slide1 a{
+    border-radius: 11px;
+    border: solid #e4e4e4 1px;
+    height: 250px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .swiper-slide1 img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  .swiper-button-next1{
+    background-color: rgba(10, 4, 48, 0.4);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: -5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    z-index: 1000;
+  }
+  .swiper-button-prev1 img, .swiper-button-next1 img{
+    width: 40%;
+    height: 50%;
+  }
+  .swiper-button-prev1{
+    background-color: rgba(10, 4, 48, 0.4);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: -5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    z-index: 1000;
+  }
+  .swiper-button-prev1:hover , .swiper-button-next1:hover {
+    background-color: rgba(10, 4, 48, 1);
+  }
+a{
+    text-decoration: none;
+    color: white;
+}
+.Scontent{
+    width: 78%;
+    margin: auto;
+    position: relative;
+}
+.swiper{
+    padding: 70px 20px;
+}
+
+/**************Why KAWA **********************/
+.why{
+    background-image: url('../imgs/picture.jpg');
+    height: 400px;
+    background-size: cover;
+}
+.why .txt{
+    background:  linear-gradient(to right, rgba(16, 4, 2, 1), rgba(16, 4, 2, 0));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.why .txt div{
+    width: 60%;
+    margin-left: 110px;
+}
+.why .txt h1{
+    font-size: 75px;
+    color: white;
+}
+.why .txt p{
+    font-size: 17px;
+    color: white;
+    font-weight: 300;
+}
+/****************************** Contact Us ************************************/
+.contactus .title{
+    margin-left: 50px;
+    color: #081853;
+}
+.contactus.arab {
+    direction: rtl;
+    margin-right: 80px;
+}
+
+.contactus .title h1{
+    border-bottom: #081853 solid 2px;
+}
+.contactus .title p{
+    color: #595959;
+}
+.contactus form{
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 50px;
+    margin-left: 50px;
+    width: 70%;
+}
+.contactus form label{
+    color: #595959;
+}
+.contactus h5{
+    margin-top: 25px;
+}
+.contactus form div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 35px;
+}
+.contactus form div label{
+    font-size: 13px;
+}
+.contactus form div input{
+    width: 300px;
+    height: 35px;
+    padding: 8px;
+}
+.contactus form div textarea{
+    width: 100%;
+    padding: 20px;
+}
+.msg{
+    grid-area:  span 1/ span 3;
+}
+.contactus form div.submit{
+    grid-area: 4 / 1 ;
+}
+.contactus form div.submit input{
+    background-color: #242480;
+    width: 210px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 11px;
+    font-size: 20px;
+}

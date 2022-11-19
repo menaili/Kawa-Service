@@ -1,0 +1,355 @@
+@media screen and (max-width: 1100px) and (min-width:900px){
+	/************** Header Styling ******************/
+	.serviceList{
+		margin: 0px;
+	}
+	.navigationlinks{
+		font-size: 15px;
+	}
+	.navigationlinks li a{
+		margin: 0px;
+	}
+	/******************* front styling ************/
+	.front-text{
+		width: 80%;
+	}
+	.front{
+		background-size: cover;
+	}
+	/********** Members Styling *******************/
+	.member{
+		width: 230px;
+		height: 300px;
+	}
+	.swiper{
+		padding: 55px 15px;
+	}
+	.item{
+		margin: 8px;
+		width: 275px;
+	}
+	.contactus form{
+		grid-template-columns: auto auto;
+	}
+	.contactus form div.submit{
+		grid-area: 5 / 1;
+	}
+	.msg{
+		grid-area: 4 / 1 / span 1/ span 2;
+	}
+	
+	
+}
+@media screen and (max-width: 900px) and (min-width: 601px){
+	/****************** Header Styling ********************/
+	.serviceList{
+		margin: 0px;
+		padding: 0px;
+	}
+	.navigationlinks{
+		font-size: 15px;
+		align-items: flex-start;
+		margin-top: 0px;
+	}
+	.navigationlinks li a{
+		margin: 0px;
+	}
+	.header{
+		height: max-content;
+		flex-direction: column;
+		background-color: transparent;
+		position: static;
+	}
+	.logo{
+		position: relative;
+		width: 100%;
+		background-color: white;
+		top: 0px;
+		display: flex;
+		align-items: center;
+		height: 50px;
+	}
+	.selectlang{
+		position: absolute;
+	}
+	.selectLang select{
+		color: #081853;
+	}
+	.navbar{
+		display: flex ;
+		justify-content: center;
+		height: 60px;
+		background-color: #081853;
+		width: 100%;
+		align-items: center;
+	}
+	.ourservice{
+		top: 0px;
+		position: relative;
+	}
+	
+/********************Front Styling ********/
+	.front-text h1{
+		font-size: 55px;
+	}
+	.front{
+		background-size: cover;
+		
+	}
+	.front-text{
+		width: 80%;
+		margin-left: 60px;
+	}
+	.front-text p{
+		margin-top: 6px;
+		font-size: 15px;
+	}
+	.front-text button{
+		width: 160px;
+		height: 50px;
+		margin-top: 10px;
+		font-size: 17px;
+	}
+	/*******************Partner Styling ****************/
+	.swiper-slide1 a , .member{
+		width: 155px;
+		height: 200px;
+	}
+	.Scontent{
+		width: 85%;
+	}
+	.swiper-button-prev1, .swiper-button-next1{
+		width: 30px;
+		height: 30px;
+	}
+	.swiper-button-prev1{
+		left: -7%;
+	}
+	.swiper-button-next1{
+		right: -8%;
+	}
+	.swiper{
+		padding: 50px 10px;
+
+	}
+
+/************* Services Styling *********/
+	.item{
+	width: 80%;
+	margin: 0px;
+	}
+	.item .picture{
+	display: flex;
+	border: none;
+	box-shadow: none;
+	align-items: flex-start;
+	padding:  10px;
+	}
+	.item .picture div{
+		display: flex;
+		align-items: center;
+	}
+	.parent{
+		display: block;
+		padding: 30px 5px;
+	}
+	.item .picture img {
+		width: 130px;
+		height: 130px;
+	}
+	.item .picture p{
+		width: 100%;
+		text-align: center;
+	}
+	/************** why KAWA ****************/
+	.why .txt h1{
+		font-size: 50px;
+	}
+	.why .txt p{
+		font-size: 13px;
+	}
+
+	/************** Contact **********************/
+
+	.contactus form{
+		width: 85%;
+		grid-template-columns: auto auto;
+	}
+	.contactus form div.submit{
+		grid-area: 5 / 1;
+	}
+	.msg{
+		grid-area: 4 / 1 / span 1/ span 2;
+	}
+	.contactus form div input  {
+		width: 250px;
+	}
+
+	/************Footer *****************/
+	.footer .info{
+		flex-direction: column;
+		height: max-content;
+		align-items: flex-start;
+	}
+	.about{
+		flex-direction: column;
+	}
+	.pic{
+		width: 90%;
+	}
+}
+@media screen and (max-width: 600px) and (min-width: 0px){
+		/****************** Header Styling ********************/
+		.serviceList{
+			margin: 0px;
+			padding: 0px;
+		}
+		.navigationlinks{
+			font-size: 13px;
+			align-items: flex-start;
+			margin-top: 0px;
+		}
+		.navigationlinks li a{
+			margin: 0px;
+		}
+		.header{
+			height: max-content;
+			flex-direction: column;
+			background-color: transparent;
+			position: static;
+		}
+		.logo{
+			position: relative;
+			width: 100%;
+			background-color: white;
+			top: 0px;
+			display: flex;
+			align-items: center;
+			height: 50px;
+		}
+		.selectlang{
+			position: absolute;
+		}
+		.selectLang select{
+			color: #081853;
+		}
+		.navbar{
+			display: flex ;
+			justify-content: center;
+			height: 60px;
+			background-color: #081853;
+			width: 100%;
+			align-items: center;
+			
+		}
+		.ourservice{
+			top: 0px;
+			position: relative;
+		}
+		/********************Front Styling ********/
+	.front-text h1{
+		font-size: 35px;
+	}
+	.front{
+		background-size: cover;
+		
+	}
+	.front-text{
+		width: 80%;
+		margin-left: 20px;
+	}
+	.front-text p{
+		margin-top: 2px;
+		font-size: 12px;
+	}
+	.front-text button{
+		width: 140px;
+		height: 45px;
+		margin-top: 8px;
+		font-size: 15px;
+	}
+	/*******************Partner Styling ****************/
+	.swiper-slide1 a , .member{
+		width: 140px;
+		height: 190px;
+	}
+	.Scontent{
+		width: 95%;
+	}
+	.swiper-button-prev1, .swiper-button-next1{
+		
+		display: none;
+	}
+	.swiper{
+		padding: 50px 10px;
+
+	}
+	/************* Services Styling *********/
+	.item{
+	width: 95%;
+	margin: 0px;
+	}
+	.item .picture{
+	display: flex;
+	border: none;
+	box-shadow: none;
+	align-items: flex-start;
+	padding:  10px;
+	}
+	.item .picture div{
+		display: flex;
+		align-items: center;
+	}
+	.parent{
+		display: block;
+		padding: 30px 5px;
+	}
+	.item .picture img {
+		width: 130px;
+		height: 130px;
+	}
+	.item .picture p{
+		width: 100%;
+		text-align: center;
+	}
+	/************** why KAWA ****************/
+	.why .txt h1{
+		font-size: 33px;
+	}
+	.why .txt p{
+		font-size: 11px;
+	}
+	.why .txt div{
+		width: 90%;
+		margin-left: 20px;
+	}
+
+	/************** Contact **********************/
+
+	.contactus form{
+		width: 85%;
+		grid-template-columns: auto;
+	}
+	.contactus form div.submit{
+		grid-area: 8 / 1;
+	}
+	.msg{
+		grid-area: 7 / 1 / span 1/ span 1;
+	}
+	.contactus form div input  {
+		width: 95%;
+	}
+
+	/************Footer *****************/
+	.footer .info{
+		flex-direction: column;
+		height: max-content;
+		align-items: flex-start;
+	}
+	.about{
+		flex-direction: column;
+	}
+	.pic{
+		width: 90%;
+	}
+}
