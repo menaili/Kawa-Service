@@ -1,3 +1,45 @@
+<div class="contactus" id="contactus">
+    <div class="title">
+        <h1 titre="services">Contact Us</h1>
+        <h5 titre="help">How can we help you?</h5>
+        <p>Drop us a line and we will get back to you as soon as possible, usually within 24 hours.</p>
+    </div>
+    <form action="{{route('Notification.store')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="">
+            <label for="">First Name:</label>
+            <input type="text" name="FirstName">
+        </div>
+        <div class="">
+            <label for="">Last Name:</label>
+            <input type="text" name="LastName">
+        </div>
+        <div>
+            <label for="">Company Name:</label>
+            <input type="text" name="CompanyName">
+        </div>
+        <div>
+            <label for="">E-mail:</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="">Subject:</label>
+            <input type="text" name="subject">
+        </div>
+        <div>
+            <label for="">Phone Number:</label>
+            <input type="text" name="phone_number">
+        </div>
+        <div class="msg">
+            <label for="">Message:</label>
+            <textarea name="message" id=""  rows="8"></textarea>
+        </div>
+        <div class="submit">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    
+</div>
 <div class="footer" id="footer">
         <h1>KAWA SERVICE</h1>
         <div class="info">
@@ -13,7 +55,7 @@
                 <a href="index.php#team" titre ="team">Team </a> <br>
                 <a href="index.php#services" titre="services"> Services</a> <br>
                 <a href="pages/politique.html" target="_blank" titre="privacy"> Privacy Policy</a> <br>
-                <a href="pages/help.php" target="_blank" titre="help"> How we can help you ?</a> <br>
+                <a href="#footer" target="_blank" titre="help"> How we can help you ?</a> <br>
             </div>
             <div>
                 <h3>Contact Us</h3>

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use App\Models\Link;
 use App\Models\Position;
 use App\Models\Project;
 use Illuminate\Http\Request;
-use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
 
 class MemberController extends Controller
 {
@@ -17,10 +17,12 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = Member::with('position')->get();
-        $link= Member::whith('link')->where('member_id','=',);
+        $members = Member::with('position','link')->get();
+        $projects = Project::with('member','picture')->get();
+       // $members = Member::find(2)->link;
+
       //return $members;
-        return view('index',compact('members'));
+        return view('index',compact('members','projects'));
     }
 
     /**
@@ -30,7 +32,8 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        $positions = Position::all();
+        return view('pages.add-member',compact('positions'));
     }
 
     /**
@@ -41,7 +44,35 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $member = Member::create([
+            'name' => $request->name,
+            'position_id' => $request->position,
+            'image' => $request->image,
+           
+        ]);
+
+        Link::createMany(
+            [
+            'member_id' => $member->id,
+            'url' => $request->facebook
+            ],
+
+           [
+            'member_id' => $member->id,
+            'url' => $request->instagram
+           ],
+
+           [
+            'member_id' => $member->id,
+            'url' => $request->linkedin
+           ],
+
+           [
+            'member_id' => $member->id,
+            'url' => $request->twitter
+           ]
+        
+        );
     }
 
     /**

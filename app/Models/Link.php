@@ -10,7 +10,7 @@ class Link extends Model
     use HasFactory;
     protected $fillable = [
         'user_id',
-        'link',
+        'url',
         'application',
         'icon',
         
@@ -20,4 +20,6 @@ class Link extends Model
     {
         return $this->belongsTo(Member::class);
     }
+
+    
 }

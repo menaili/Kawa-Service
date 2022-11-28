@@ -9,6 +9,9 @@ function hid(){
 }
 
 
+
+
+
 window.onscroll=()=>{
     var header= document.getElementById("head");
 	if (window.scrollY>100) {

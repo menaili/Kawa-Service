@@ -21,4 +21,35 @@ Route::get('Kawa', function () {
     return view('welcome');
 });
 
-Route::resource('/', 'App\Http\Controllers\MemberController'::class);
+    Route::get('/Marketing', function () {
+         return view('pages.sponsor');
+     });
+
+     Route::get('/Websites', function () {
+        return view('pages.web');
+    });
+
+    Route::get('/App-mobile', function () {
+        return view('pages.app');
+    });
+
+    Route::get('/Design', function () {
+        return view('pages.design');
+    });
+
+    Route::get('/Store', function () {
+        return view('pages.store');
+    });
+
+    Route::get('/Hosting', function () {
+        return view('pages.design');
+    });
+
+    Route::post('/memAdd', ['App\Http\Controllers\DoController'::class,'store'])->name("memAdd");
+
+
+    Route::resource('/Notification', 'App\Http\Controllers\NotificationController'::class);
+
+    Route::resource('/Projects', 'App\Http\Controllers\ProjectController'::class);
+
+    Route::resource('/', 'App\Http\Controllers\MemberController'::class);

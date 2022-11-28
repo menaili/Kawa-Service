@@ -13,12 +13,12 @@
 
                 </li>
                 <ul class="ourservice" id="ourservice">
-                    <li><a href="direction.php?do=marketing" titre="sponsor">Degital Marketing</a> </li>
-                    <li><a href="direction.php?do=website" titre="web">Web Site</a></li>
-                    <li><a href="direction.php?do=appmobile" titre="App">App Mobile</a></li>
-                    <li><a href="direction.php?do=design" titre="design">Design</a></li>
-                    <li><a href="direction.php?do=store" titre="store">Online Store</a></li>
-                    <li><a href="direction.php?do=hosting" titre="hosting">Hosting</a></li>
+                    <li><a href="/Marketing" titre="sponsor">Degital Marketing</a> </li>
+                    <li><a href="/Websites" titre="web">Web Site</a></li>
+                    <li><a href="/App-mobile" titre="App">App Mobile</a></li>
+                    <li><a href="/Design" titre="design">Design</a></li>
+                    <li><a href="/Store" titre="store">Online Store</a></li>
+                    <li><a href="/Hosting" titre="hosting">Hosting</a></li>
 
                 </ul>
             </div>
@@ -29,10 +29,13 @@
             <li>
                 <a href="#footer" titre="contact">Contact US</a>
             </li>
+           
+            
             
         </ul>
         
     </div>
+  
     <div class="selectLang">
             
         <select id="languages" onchange="mylanguage()">

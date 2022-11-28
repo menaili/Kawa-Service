@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAWA Services </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="{{ asset('assets/CSS/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/CSS/style.css') }}">
+
+ 
+  <link rel="stylesheet" href="{{ asset('assets/CSS/style1.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/CSS/responsive.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">    
+</head>
+
+<body> 
+  @include('pages.header')
 <body >
    
     <div class="head">
@@ -20,37 +40,37 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="pages/imgs/logo1.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo1.jpg') }}" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="pages/imgs/LOGO2.jpg" alt="">
+                <img src="{{ asset('assets/imgas/LOGO2.jpg') }}" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="pages/imgs/logo.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo.jpg') }}" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="pages/imgs/logo3.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo3.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/logo4.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo4.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/logo5.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo5.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/logo6.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo6.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/logo8.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo8.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/logo7.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo7.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/logo9.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo9.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/logo10.jpg" alt="">
+                <img src="{{ asset('assets/imgas/logo10.jpg') }}" alt="">
             </div>
             </div>
             <div>
@@ -78,10 +98,10 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="pages/imgs/post1.jpg" alt="">
+                <img src="{{ asset('assets/imgas/post1.jpg') }}" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="pages/imgs/post2.jpg" alt="">
+                <img src="{{ asset('assets/imgas/post2.jpg') }}" alt="">
               </div>
             </div>
             <div>
@@ -109,13 +129,13 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
         <div class="swiper-slide">
-                <img src="pages/imgs/cover.jpg" alt="">
+                <img src="{{ asset('assets/imgas/cover.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/coverture2.jpg" alt="">
+                <img src="{{ asset('assets/imgas/coverture2.jpg') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="pages/imgs/coverture3.jpg" alt="">
+                <img src="{{ asset('assets/imgas/coverture3.jpg') }}" alt="">
             </div>
             </div>
             <div>
@@ -126,6 +146,33 @@
           </div>
     </div>
 </div>
+@include('pages.footer')
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
+<script src="{{ asset('assets/js/lang.js') }}"></script>
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+
+    slidesPerView: 1,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+</script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
 
 
 

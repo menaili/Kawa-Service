@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('member_id')->constrained('members');
             $table->string('application');
             $table->string('icon');
-            $table->string('link');
+            $table->string('url');
 
             $table->timestamps();
         });

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Member;
+use App\Models\Picture;
+use App\Models\Project;
+use App\Models\Team;
 
 class ProjectController extends Controller
 {
@@ -23,7 +27,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $members = Member::all();
+        return view('pages.add-project',compact('members'));
     }
 
     /**
@@ -34,7 +39,29 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      // return $request->file('images')->st;
+        
+        $project = new Project;
+        $project->name = $request->name;
+        $project->description = $request->description;
+        $project->image = $request->file('pic')->store('/images/resource', ['disk' =>   'my_files']);
+        $project->URL = $request->link;
+        $project->save();
+
+        foreach($request->check as $members ) {
+            $team = new Team;
+            $team->member_id = $members;
+            $team->project_id = $project->id;
+            $team->save();
+        }
+
+        foreach($request->file('images') as $imagefile ) {
+        $image = new Picture;
+        $image->path = $imagefile->store('/images/resource', ['disk' =>   'my_files']);
+        $image->project_id = $project->id;
+        $image->save();
+        }
+
     }
 
     /**

@@ -46,10 +46,12 @@
         <div class="Scontent">
             <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
+                    @foreach ($projects as $project)
                   <div class="swiper-slide swiper-slide1 ">
-                    <a target="_blank" href="https://www.lg.com/dz"><img src="{{ asset('assets/imgs/lg.png') }}" alt=""></a>
+                    <a target="_blank" href="{{$project->URL}}"><img src="{{$project->image}}" alt=""></a>
                     
                   </div>
+                  @endforeach
                   
                   <div class="swiper-slide swiper-slide1 ">
                     <a target="_blank" href="https://www.khalijistore.com/"><img src="{{ asset('assets/imgs/partner1.png') }}" alt=""></a>
@@ -102,7 +104,7 @@
         </div>
         <div class="parent row">
             <div class="item right ">
-                <a href="direction.blade.php?do=marketing">
+                <a href="/Marketing">
                     <div class="picture">
                         <div>
                             <img src="{{ asset('assets/imgs/sponsor.png') }}" alt="">
@@ -113,7 +115,7 @@
                 </a>
             </div>
             <div class="item right">
-                <a href="direction.blade.php?do=website">
+                <a href="/Websites">
                     <div class="picture">
                         <div>
                             <img src="{{ asset('assets/imgs/web.png') }}" alt="">
@@ -125,7 +127,7 @@
                 </a>
             </div>
             <div class="item right">
-                <a href="direction.blade.php?do=appmobile">
+                <a href="/App-mobile">
                     <div class="picture">
                         <div>
                             <img src="{{ asset('assets/imgs/app.png') }}" alt="">
@@ -138,7 +140,7 @@
                 </a>
             </div>
             <div class="item right">
-                <a href="direction.blade.php?do=design">
+                <a href="/Design">
                     <div class="picture">
                         <div>
                             <img src="{{ asset('assets/imgs/design.png') }}" alt="">
@@ -150,7 +152,7 @@
                 </a>
             </div>
             <div class="item right">
-                <a href="direction.blade.php?do=store">
+                <a href="/Store">
                     <div class="picture">
                         <div>
                             <img src="{{ asset('assets/imgs/store.png') }}" alt="">
@@ -162,7 +164,7 @@
                 </a>
             </div>
             <div class="item right">
-                <a href="direction.blade.php?do=hosting">
+                <a href="/Hosting">
                     <div class="picture">
                         <div>
                             <img src="{{ asset('assets/imgs/hosting.png') }}" alt="">
@@ -202,13 +204,14 @@
                 
                 <div class="swiper-slide">
                    <div class="member">
-                    <img class="memberpic" src="{{ asset('assets/imgs/oussama.png') }}" alt="">
+                    <img class="memberpic" src="{{$member->image}}" alt="">
                     <div class="member-info">
                         <h5>{{$member->name}}</h5>
-                        <p titre="gerant">{{$member->position->name}} </p>
+                        <p titre="gerant">{{$member->position->name}}</p>
                     <div class="social">
-                        
-                            <a href="{{$member->link->link}}"  target="_blank"> <i class="bi bi-instagram"></i> </a>
+                        @foreach($member->link as $item)
+                            <a href="{{$item->url}}"  target="_blank"><i class="{{$item->icon}}"></i> </a>
+                        @endforeach
                             {{-- <a target="_blank" href="http://facebook.com/oussamaharrarads"> <i class="bi bi-facebook"></i> </a>
                             <a href="https://twitter.com/Oussama_harrar?s=09" target="_blank"> <i class="bi bi-twitter"></i></a>
                             <a href="https://dz.linkedin.com/in/oussama-harrar-709333184" target="_blank" > <i class="bi bi-linkedin"></i> </a> --}}
@@ -219,7 +222,7 @@
                  </div>
                 @endforeach
 
-
+{{-- 
                  <div class="swiper-slide">
                 <div class="member">
                     <img class="memberpic" src="{{ asset('assets/imgs/djilali.jpg') }}" alt="">
@@ -269,54 +272,14 @@
                         </div>
                     </div>
                     
-                    </div>
+                    </div> --}}
             </div>
             </div>
             
         </div>
     </div>
 
-    <div class="contactus" id="contactus">
-        <div class="title">
-            <h1 titre="services">Contact Us</h1>
-            <h5 titre="help">How can we help you?</h5>
-            <p>Drop us a line and we will get back to you as soon as possible, usually within 24 hours.</p>
-        </div>
-       
-        <form action="" class="">
-            <div class="">
-                <label for="">First Name:</label>
-                <input type="text">
-            </div>
-            <div class="">
-                <label for="">Last Name:</label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="">Company Name:</label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="">E-mail:</label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="">Subject:</label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="">Phone Number:</label>
-                <input type="text">
-            </div>
-            <div class="msg">
-                <label for="">Message:</label>
-                <textarea name="" id=""  rows="8"></textarea>
-            </div>
-            <div class="submit">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
-    </div>
+    
     @include('pages.footer')
     
     <script src="{{ asset('assets/js/language.js') }}"></script>

@@ -14,7 +14,7 @@ class LinkController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
