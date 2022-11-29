@@ -116,20 +116,23 @@
     </style>
 </head>
 <body>
-            <h1 titre="help">Add new Project </h1>
+            <h1 titre="help">Edit Project </h1>
             {{-- <p>Drop us a line and we will get back to you as soon as possible, usually within 24 hours.</p> --}}
-            <form action="{{route('Projects.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('Projects.update',$edit->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT') 
+                
+                    
                 <div class="row">
                     <i class="bi bi-browser-edge" style="color: white;"></i>
                     <label for="">Project Name :</label>
-                    <input type="text" placeholder="Project Name" name="name" required>
+                    <input type="text" value="{{$edit->name}}" name="name" required>
                 </div>
 
                 <div class="row">
                     <i class="bi bi-card-text" style="color: white;"></i>
                     <label for="">Project Description :</label>
-                    <textarea id="w3review" placeholder="Description" name="description" required rows="4" cols="50"></textarea>
+                    <textarea id="w3review" placeholder="Description" name="description" required rows="4" cols="50">{{$edit->description}}</textarea>
                 </div>
                
                 <div>
@@ -166,13 +169,14 @@
                 <div class="row">
                     <i class="bi bi-link-45deg" style="color: white;"></i>
                     <label for=""> Url of project :</label>
-                    <input type="text" placeholder="Project link" name="link" required>
+                    <input type="text" value="{{$edit->URL}}" name="link" required>
                 </div>
 
                 
+
                 
                 <div class="submit">
-                    <input  type="submit" name="Submit" value="Add">
+                    <input  type="submit" name="Submit" value="Update">
                 </div>
 
             </form>

@@ -5,9 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Member;
 use App\Models\Link;
+use App\Models\Picture;
+use App\Models\Project;
+
 
 class DoController extends Controller
 {
+    public function membbmem()
+    {
+        $members = Member::with('position','link')->get();
+        return view('pages.members', compact('members'));
+    }
+
+    public function deleteP(Request $request)
+    {
+        Picture::where('project_id',$request->deleteme)->delete();
+
+        Project::findorFail($request->deleteme)->delete();
+
+      return back();
+    }
+
     public function store(Request $request)
     {
 

@@ -53,14 +53,16 @@
                   </div>
                   @endforeach
                   
-                  <div class="swiper-slide swiper-slide1 ">
+                  {{-- <div class="swiper-slide swiper-slide1 ">
                     <a target="_blank" href="https://www.khalijistore.com/"><img src="{{ asset('assets/imgs/partner1.png') }}" alt=""></a>
                     
-                  </div>
+                  </div> 
+
                   <div class="swiper-slide swiper-slide1 ">
                     <a target="_blank" href="https://1khalijstore.com/"><img src="{{ asset('assets/imgs/partner2.png') }}" alt=""></a>
                     
                   </div>
+
                   <div class="swiper-slide swiper-slide1 ">
                     <a target="_blank" href="https://prohurbs.com/"><img src="{{ asset('assets/imgs/partner3.png') }}" alt=""></a>
                     
@@ -86,7 +88,7 @@
                   <div class="swiper-slide swiper-slide1 slide-up">
                     <a target="_blank" href="https://www.facebook.com/wissamexcellence"><img src="{{ asset('assets/imgs/partner8.png') }}" alt=""></a>
                     
-                  </div>
+                  </div>--}}
                 </div>
                 <div class="swiper-pagination"></div>
               </div>

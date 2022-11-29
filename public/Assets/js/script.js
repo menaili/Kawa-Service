@@ -10,6 +10,16 @@ function hid(){
 
 
 
+const projects = document.getElementById("ourProjects");
+function showP(){
+    projects.ProjectList.add('show');
+}
+function hidP(){
+    projects.ProjectList.remove('show');
+}
+
+
+
 
 
 window.onscroll=()=>{

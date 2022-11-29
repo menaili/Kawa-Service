@@ -23,8 +23,17 @@
                 </ul>
             </div>
 
+
+            
+
             <li>
                 <a href="index.php#team" titre="team">Team</a>
+            </li>
+            <li>
+                <a href="/Projects" titre="pro">Project</a>
+            </li>
+            <li>
+                <a href="/members" titre="mem">Member</a>
             </li>
             <li>
                 <a href="#footer" titre="contact">Contact US</a>
