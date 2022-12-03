@@ -14,7 +14,8 @@ class NotificationController extends Controller
      */
     public function index()
     {
-        //
+        $notify = Notification::all();
+        return view('pages.notify',compact('notify'));
     }
 
     /**

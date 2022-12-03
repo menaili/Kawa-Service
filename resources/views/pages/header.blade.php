@@ -38,6 +38,22 @@
             <li>
                 <a href="#footer" titre="contact">Contact US</a>
             </li>
+            @php
+                $not = DB::table('notifications')
+                ->where('status','pending')
+                ->count();
+            @endphp
+        
+            <li>
+                <a href="/Notification" titre="Notification">Notification
+                    @if ($not !=0 )
+                    <span class="badge" style="position: absolute;
+                    border-radius: 50%;
+                    background: red;
+                    color: white;">{{$not}}</span> 
+                    @endif
+                    </a>
+            </li>
            
             
             

@@ -137,7 +137,7 @@
                
                 <div>
                     <i class="bi bi-person-bounding-box" style="color: white;"></i><label for="">Project Picture</label><br>
-                    <input type="file" placeholder="" name="pic" required>
+                    <input type="file" placeholder="" name="pic" >
 
                 </div>
                

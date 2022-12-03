@@ -80,7 +80,11 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $detail = Project::with('member')->where('id',$id)->first();
+        $pictures = Picture::where('project_id',$id)->get();
+        
+        return view('pages.detail',compact('detail','pictures'));
+
     }
 
     /**
@@ -111,8 +115,9 @@ class ProjectController extends Controller
         $pro->name = $request->name;
         $pro->description = $request->description;
         $pro->URL = $request->link;
+        if($request->file('pic') != null){
         $pro->image = $request->file('pic')->store('/images/resource', ['disk' =>   'my_files']);
- 
+        }
         $pro->save();
 
         

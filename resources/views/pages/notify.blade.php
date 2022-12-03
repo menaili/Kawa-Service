@@ -19,8 +19,8 @@
 <body> 
   @include('pages.header')
  <div class="head">
-        <h1 class="title_ser" titre="hosting">Members</h1>
-        <button onclick="location.href='/Members/create'" type="button" class="btn btn-primary">Add new member</button>
+        <h1 class="title_ser" titre="hosting">Projects</h1>
+        <button onclick="location.href='/Projects/create'" type="button" class="btn btn-primary">Add new project</button>
         </div>
     <table class="table table-striped">
         
@@ -28,24 +28,39 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
-      <th scope="col">position</th>
-      <th scope="col">Created at</th>
-      <th scope="col">Updated at</th>
+      <th scope="col">Company</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Messages</th>
+      <th scope="col">Send at</th>
       <th scope="col">Status</th>
+      <th scope="col">Action</th>
+
 
     </tr>
   </thead>
   <tbody>
-    @foreach ($members as $item)
+    @foreach ($notify as $item)
     <tr>
 
       <th>{{$item->id}}</th>
-      <td>{{$item->name}}</td>
-      <td>{{$item->position->name}}</td> 
-      <td>{{$item->created_at}}</td> 
-      <td>{{$item->updated_at}}</td>
+      <td>{{$item->FirstName}} {{$item->LastName}}</td>
+      <td>{{$item->CompanyName}}</td> 
+      <td>{{$item->email}}</td> 
+      <td>{{$item->phone_number	}}</td>
+      <td>{{$item->message}}</td> 
+      <td>{{$item->created_at}}</td>
+
+      @if ($item->status == 'pending')
+      <td style="color: red;">{{$item->status}}</td>
+
+      @else
+      <td style="color: green;">{{$item->status}}</td>
+
+      @endif
+
       <td>
-        {{-- <a href="/members/edit/{{$item->id}}"><button type="button" class="btn btn-light">Edit</button></a> --}}
+        <a href="{{route('Projects.edit',$item->id)}}"><button type="button" class="btn btn-primary">Accept</button></a>
         <button type="button" class="btn btn-danger deleteCategoryBtn" value="{{$item->id}}">Delete</button>
 
     </td> 
@@ -65,7 +80,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
 
-            <form action="{{ route('deletememb')}}" method="POST">
+            <form action="{{ route('deleteP')}}" method="POST">
               @csrf
 
             <div class="modal-header">

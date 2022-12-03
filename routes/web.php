@@ -45,14 +45,26 @@ Route::get('Kawa', function () {
         return view('pages.design');
     });
 
+
+
+
+
     Route::post('/memAdd', ['App\Http\Controllers\DoController'::class,'store'])->name("memAdd");
 
     Route::post('delete/project', ['App\Http\Controllers\DoController'::class,'deleteP'])->name("deleteP");
 
     Route::get('/members', ['App\Http\Controllers\DoController'::class,'membbmem'])->name("membbmem");
 
+    Route::get('/', ['App\Http\Controllers\DoController'::class,'kawa'])->name("kawa");
+
+    Route::post('/members/delete', ['App\Http\Controllers\DoController'::class,'deletememb'])->name("deletememb");
+
+    Route::get('/members/edit/{id}', ['App\Http\Controllers\DoController'::class,'editM'])->name("editM");
+
+    Route::put('/updateM/{id}', ['App\Http\Controllers\DoController'::class,'updateM'])->name("updateM");
+
     Route::resource('/Notification', 'App\Http\Controllers\NotificationController'::class);
 
     Route::resource('/Projects', 'App\Http\Controllers\ProjectController'::class);
 
-    Route::resource('/', 'App\Http\Controllers\MemberController'::class);
+    Route::resource('/Members', 'App\Http\Controllers\MemberController'::class);

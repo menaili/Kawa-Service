@@ -17,12 +17,12 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = Member::with('position','link')->get();
-        $projects = Project::with('member','picture')->get();
-       // $members = Member::find(2)->link;
+    //     $members = Member::with('position','link')->get();
+    //     $projects = Project::with('member','picture')->get();
+    //    // $members = Member::find(2)->link;
 
-      //return $members;
-        return view('index',compact('members','projects'));
+    //   //return $members;
+    //     return view('index',compact('members','projects'));
     }
 
     /**
@@ -94,7 +94,7 @@ class MemberController extends Controller
      */
     public function edit(Member $member)
     {
-        //
+
     }
 
     /**
@@ -104,9 +104,44 @@ class MemberController extends Controller
      * @param  \App\Models\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Member $member)
+    public function update(Request $request, $id)
     {
-        //
+        // $member = Member::findorFail($id);
+ 
+        // $member->name = $request->name;
+
+        // $member->position_id = $request->position;
+
+
+        // if($request->file('image') != null){
+        // $member->image = $request->file('image')->store('/images/resource', ['disk' =>   'my_files']);
+        // }
+        // $member->save();
+
+        // Link::where('member_id',$member->id)->delete();
+
+        // Link::create(
+        //     [
+        //     'member_id' => $member->id,
+        //     'url' => $request->facebook
+        //     ],
+
+        //    [
+        //     'member_id' => $member->id,
+        //     'url' => $request->instagram
+        //    ],
+
+        //    [
+        //     'member_id' => $member->id,
+        //     'url' => $request->linkedin
+        //    ],
+
+        //    [
+        //     'member_id' => $member->id,
+        //     'url' => $request->twitter
+        //    ]
+        
+        // );
     }
 
     /**

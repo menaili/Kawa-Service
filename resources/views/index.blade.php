@@ -48,7 +48,7 @@
                 <div class="swiper-wrapper">
                     @foreach ($projects as $project)
                   <div class="swiper-slide swiper-slide1 ">
-                    <a target="_blank" href="{{$project->URL}}"><img src="{{$project->image}}" alt=""></a>
+                    <a target="_blank" href="{{route('Projects.show',$project->id)}}"><img src="{{$project->image}}" alt=""></a>
                     
                   </div>
                   @endforeach
@@ -193,6 +193,8 @@
             
         </div>
 </div>
+
+
 <div class=" services members" id="team">
         <div class="title">
             <h1 titre="services">Our Team</h1>
@@ -290,6 +292,9 @@
     
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 
 <!-- Initialize Swiper -->
 <script>

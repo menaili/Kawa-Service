@@ -1,16 +1,6 @@
-*{
-    margin: 0;
-    padding: 0px;
-}
-body{
-    background-color: white;
-}
 
 /*************** Title Styling ************/
-.head{
-    padding: 20px 40px;
-    font-size: 18px;
-}
+
 .title_ser{
     margin-top: 70px;
     text-align: center;
@@ -140,3 +130,6 @@ body{
     }
 
 } 
+
+
+
