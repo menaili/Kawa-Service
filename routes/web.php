@@ -48,6 +48,8 @@ Route::get('Kawa', function () {
     Route::post('/memAdd', ['App\Http\Controllers\DoController'::class,'store'])->name("memAdd");
 
 
+    Route::put('/updateNoty/{id}', ['App\Http\Controllers\DoController'::class,'updateNotify'])->name("updateNotify");
+
     Route::resource('/Notification', 'App\Http\Controllers\NotificationController'::class);
 
     Route::resource('/Projects', 'App\Http\Controllers\ProjectController'::class);

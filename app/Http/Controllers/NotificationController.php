@@ -14,7 +14,12 @@ class NotificationController extends Controller
      */
     public function index()
     {
+<<<<<<< Updated upstream
         //
+=======
+        $notify = Notification::orderBy('id','desc')->get();
+        return view('pages.notify',compact('notify'));
+>>>>>>> Stashed changes
     }
 
     /**
@@ -77,9 +82,9 @@ class NotificationController extends Controller
      * @param  \App\Models\Notification  $notification
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Notification $notification)
+    public function update(Request $request, $id)
     {
-        //
+       
     }
 
     /**
