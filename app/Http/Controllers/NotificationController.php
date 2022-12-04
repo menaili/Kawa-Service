@@ -14,12 +14,9 @@ class NotificationController extends Controller
      */
     public function index()
     {
-<<<<<<< Updated upstream
-        //
-=======
+
         $notify = Notification::orderBy('id','desc')->get();
         return view('pages.notify',compact('notify'));
->>>>>>> Stashed changes
     }
 
     /**
@@ -51,6 +48,8 @@ class NotificationController extends Controller
             'topic' => $request->topic,
             
         ]);
+
+        return redirect()->back()->with('message', 'Your message was successfully delivered!');
     }
 
     /**

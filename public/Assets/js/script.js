@@ -10,6 +10,15 @@ function hid(){
 
 
 
+const profile = document.getElementById("ourprofile");
+function showProfile(){
+    profile.classList.add('showProfile');
+}
+function hidProfile(){
+    profile.classList.remove('showProfile');
+}
+
+
 
 
 window.onscroll=()=>{

@@ -26,16 +26,51 @@
             <li>
                 <a href="index.php#team" titre="team">Team</a>
             </li>
+            @guest
             <li>
                 <a href="#footer" titre="contact">Contact US</a>
+            </li>  
+            @endguest
+            
+
+            @auth
+                
+            <li>
+                <a href="/Projects" titre="team">Projects</a>
             </li>
-           
+
+            <li>
+                <a href="/Members" titre="team">Members</a>
+            </li>
+
+            
+            @php
+               $counter = DB::table('notifications')->where('status','pending')->count();
+            @endphp
+            <li>
+                <a href="/Notification" titre="contact">Notification
+                @if($counter != 0)
+                    <span class="badge" style="
+                        border-radius: 50%;
+                        background: red;
+                        color: white;">{{$counter}}</span>
+                @endif
+                </a>
+            </li>
+
+            <li>
+                <a href="/user/profile" titre="contact">My profile</a>
+            </li>
+            
+            @endauth
+
             
             
         </ul>
         
     </div>
   
+    @guest
     <div class="selectLang">
             
         <select id="languages" onchange="mylanguage()">
@@ -43,7 +78,9 @@
             <option value="ar"><a href="?mylang=ar">العربية</a> </option>
             <option value="fr"><a href="?mylang=fr">French</a> </option>
         </select>
-    </div>
+    </div> 
+    @endguest
+    
 </div>
 
 

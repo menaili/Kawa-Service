@@ -18,11 +18,10 @@ class MemberController extends Controller
     public function index()
     {
         $members = Member::with('position','link')->get();
-        $projects = Project::with('member','picture')->get();
        // $members = Member::find(2)->link;
 
       //return $members;
-        return view('index',compact('members','projects'));
+        return view('pages.members',compact('members'));
     }
 
     /**
@@ -73,6 +72,9 @@ class MemberController extends Controller
            ]
         
         );
+
+        return redirect()->back()->with('message', 'a new member has been added!');
+
     }
 
     /**

@@ -83,7 +83,11 @@
 </head>
 <body>
             <h1 titre="help">Add new member </h1>
-            {{-- <p>Drop us a line and we will get back to you as soon as possible, usually within 24 hours.</p> --}}
+            @if(session()->has('message'))
+            <div class="alert alert-success" style="text-align: center; color:white; background:green;">
+                {{ session()->get('message') }}
+            </div>
+        @endif
             <form action="{{route('memAdd')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">

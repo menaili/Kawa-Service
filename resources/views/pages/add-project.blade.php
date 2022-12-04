@@ -117,8 +117,12 @@
 </head>
 <body>
             <h1 titre="help">Add new Project </h1>
-            {{-- <p>Drop us a line and we will get back to you as soon as possible, usually within 24 hours.</p> --}}
-            <form action="{{route('Projects.store')}}" method="POST" enctype="multipart/form-data">
+            @if(session()->has('message'))
+            <div class="alert alert-success" style="text-align: center; color:white; background:green;">
+                {{ session()->get('message') }}
+            </div>
+        @endif
+              <form action="{{route('Projects.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <i class="bi bi-browser-edge" style="color: white;"></i>

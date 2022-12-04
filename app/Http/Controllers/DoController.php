@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Member;
+use App\Models\Project;
+use App\Models\Picture;
+use App\Models\Notification;
+use App\Models\Team;
+use App\Models\Position;
 use App\Models\Link;
 
 class DoController extends Controller
 {
-<<<<<<< Updated upstream
-=======
     public function membbmem()
     {
         $members = Member::with('position','link')->get();
@@ -118,7 +121,6 @@ class DoController extends Controller
       return back();
     }
     
->>>>>>> Stashed changes
     public function store(Request $request)
     {
 

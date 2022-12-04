@@ -1,3 +1,4 @@
+
 <div class="contactus" id="contactus">
     <div class="title">
         <h1 titre="services">Contact Us</h1>
@@ -40,6 +41,13 @@
     </form>
     
 </div>
+
+
+@if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
 <div class="footer" id="footer">
         <h1>KAWA SERVICE</h1>
         <div class="info">

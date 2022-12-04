@@ -45,13 +45,39 @@ Route::get('Kawa', function () {
         return view('pages.design');
     });
 
-    Route::post('/memAdd', ['App\Http\Controllers\DoController'::class,'store'])->name("memAdd");
+
+    Route::get('/', ['App\Http\Controllers\DoController'::class,'kawa'])->name("kawa");
 
 
-    Route::put('/updateNoty/{id}', ['App\Http\Controllers\DoController'::class,'updateNotify'])->name("updateNotify");
 
-    Route::resource('/Notification', 'App\Http\Controllers\NotificationController'::class);
+
+    Route::resource('/Notification', 'App\Http\Controllers\NotificationController'::class)->only(['store']);;
+
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::resource('/Members', 'App\Http\Controllers\MemberController'::class);
 
     Route::resource('/Projects', 'App\Http\Controllers\ProjectController'::class);
 
-    Route::resource('/', 'App\Http\Controllers\MemberController'::class);
+    Route::put('/updateNoty/{id}', ['App\Http\Controllers\DoController'::class,'updateNotify'])->name("updateNotify");
+
+    Route::post('/deleteP', ['App\Http\Controllers\DoController'::class,'deleteP'])->name("deleteP");
+
+    Route::post('/deletememb', ['App\Http\Controllers\DoController'::class,'deletememb'])->name("deletememb");
+
+    Route::post('/memAdd', ['App\Http\Controllers\DoController'::class,'store'])->name("memAdd");
+
+    Route::resource('/Notification', 'App\Http\Controllers\NotificationController'::class)->only(['index']);
+
+
+
+});
